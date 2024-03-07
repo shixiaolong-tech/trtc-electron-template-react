@@ -1,7 +1,38 @@
 {
   "name": "trtc-electron-template-react",
   "version": "0.1.0",
-  "private": true,
+  "main": "electron.main.js",
+  "homepage": "./",
+  "description": "This is a template project used to integerate TRTC Electron SDK with react. It contains and shows the basic configurations needed. The react code is generated with create-react-app.",
+  "author": {
+    "name": "zackshi",
+    "email": "zackshi@tencent.com",
+    "url": "https://github.com/shixiaolong-tech"
+  },
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "start:web": "react-app-rewired start",
+    "build:web": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "start:electron": "electron .",
+    "start": "concurrently \"npm run start:web\" \"wait-on http://localhost:3000 && npm run start:electron\"",
+    "start:linux": "export LD_LIBRARY_PATH=./node_modules/trtc-electron-sdk/build/Release:$LD_LIBRARY_PATH && sudo ldconfig && npm run start",
+    "build:mac-x64": "electron-builder --mac --x64",
+    "build:mac-arm64": "electron-builder --mac --x64",
+    "build:mac-uni": "electron-builder --mac --universal",
+    "build:win64": "electron-builder --win --x64",
+    "build:win32": "electron-builder --win --ia32",
+    "build:linux-x64": "electron-builder --linux --x64",
+    "build:linux-arm64": "electron-builder --linux --arm64",
+    "pack:mac-x64": "npm run build:web && npm run build:mac-x64",
+    "pack:mac-arm64": "npm run build:web && npm run build:mac-arm64",
+    "pack:mac-uni": "npm run build:web && npm run build:mac-uni",
+    "pack:win64": "npm run build:web && npm run build:win64",
+    "pack:win32": "npm run build:web && npm run build:win32",
+    "pack:linux-x64": "npm run build:web && npm run build:linux-x64",
+    "pack:linux-arm64": "npm run build:web && npm run build:linux-arm64"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -9,13 +40,17 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "trtc-electron-sdk": "^11.4.503",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^24.8.8",
+    "electron-builder": "^24.13.3",
+    "electron-devtools-installer": "^3.2.0",
+    "native-ext-loader": "^2.3.0",
+    "react-app-rewired": "^2.2.1",
+    "wait-on": "^7.2.0"
   },
   "eslintConfig": {
     "extends": [
@@ -34,8 +69,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "react-app-rewired": "^2.2.1"
   }
 }

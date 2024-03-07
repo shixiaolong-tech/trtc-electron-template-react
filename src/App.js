@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import { useEffect, useRef } from 'react';
+import trtcCloud from './base/trtcCloud';
 import './App.css';
 
 function App() {
+  const localVideoDiv = useRef(null);
+
+  // useEffect(() => {
+  //   if (localVideoDiv && localVideoDiv.current) {
+  //     // trtcCloud.startLocalPreview(localVideoDiv.current);
+  //   }
+  // }, [localVideoDiv]);
+
+  function onOpenCamera() {
+    if (localVideoDiv && localVideoDiv.current) {
+      trtcCloud.startLocalPreview(localVideoDiv.current); // open and preview
+    } else {
+      if (localVideoDiv && localVideoDiv.current) {
+        trtcCloud.startLocalPreview(null); // open but not preview
+      }
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        SDK version: {trtcCloud.getSDKVersion()}
+      </div>
+      <div style={{ height: "24rem", backgroundColor: "#c6c6c6"}} ref={localVideoDiv}></div>
+      <div>
+        <button onClick={onOpenCamera}>Open Camera</button>
+      </div>
     </div>
   );
 }

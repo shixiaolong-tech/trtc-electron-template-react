@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# TRTC Electron SDK templte for react
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a template project used to integerate [TRTC Electron SDK](https://cloud.tencent.com/document/product/647) with react. It contains and shows the basic configurations needed. The react code is generated with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The target of this project is to give you base stone to quickly start discovering TRTC Electron SDK.
 
-In the project directory, you can run:
+## Run this template
 
-### `npm start`
+### Clone the code
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+git clone https://github.com/shixiaolong-tech/trtc-electron-template-react.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+cd trtc-electron-template-react
 
-### `npm test`
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Run in development
 
-### `npm run build`
+```
+npm run start                  // For Windows and MacOS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm run start:linux            // For Linux(only x64 supported)
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Build an installable package
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+npm run pack:win64              // Windows 64
+npm run pack:win32              // Windows 32
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm run pack:mac-x64            // Mac Intel
+npm run pack:mac-arm64          // Mac M*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm run pack:linux-x64          // Linux x64
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Learn more about TRTC Electron SDK
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. [Integrate TRTC Electron SDK](https://cloud.tencent.com/document/product/647/38549)
+2. [Online demostration App](https://cloud.tencent.com/document/product/647/17021)
+3. Online API document: [中文](https://web.sdk.qcloud.com/trtc/electron/doc/zh-cn/trtc_electron_sdk/TRTCCloud.html)、[English](https://web.sdk.qcloud.com/trtc/electron/doc/en-us/trtc_electron_sdk/TRTCCloud.html)
