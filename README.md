@@ -1,8 +1,8 @@
-# TRTC Electron SDK templte for react
+# TRTC Electron SDK template for react
 
 This is a template project used to integerate [TRTC Electron SDK](https://cloud.tencent.com/document/product/647) with react. It contains and shows the basic configurations needed. The react code is generated with [Create React App](https://github.com/facebook/create-react-app).
 
-The target of this project is to give you base stone to quickly start discovering TRTC Electron SDK.
+The project is a quick start to explore TRTC Electron SDK with react environment.
 
 ## Run this template
 
@@ -42,4 +42,4 @@ npm run pack:linux-x64          // Linux x64
 
 1. [Integrate TRTC Electron SDK](https://cloud.tencent.com/document/product/647/38549)
 2. [Online demostration App](https://cloud.tencent.com/document/product/647/17021)
-3. Online API document: [中文](https://web.sdk.qcloud.com/trtc/electron/doc/zh-cn/trtc_electron_sdk/TRTCCloud.html)、[English](https://web.sdk.qcloud.com/trtc/electron/doc/en-us/trtc_electron_sdk/TRTCCloud.html)
+3. Online API document:  [中文](https://web.sdk.qcloud.com/trtc/electron/doc/zh-cn/trtc_electron_sdk/TRTCCloud.html)、[English](https://web.sdk.qcloud.com/trtc/electron/doc/en-us/trtc_electron_sdk/TRTCCloud.html)
